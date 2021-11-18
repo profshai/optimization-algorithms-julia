@@ -1,3 +1,5 @@
+##### Method 1: Using Pkg package
+
 import Pkg
 Pkg.add("Ipopt")
 Pkg.add("JuMP")
@@ -30,6 +32,8 @@ optimize!(model)
 
 # Optimal consumption values:
 println("c1 = ", value(c1), " c2 = ", value(c2), " c3 = ", value(c3))
+
+##### Method 2: Using Optimal bisection algorithm
 
 function bisection(f,a,b,tol)
     sa = sign(f(a))
